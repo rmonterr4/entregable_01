@@ -1,13 +1,21 @@
 import { NavLink } from "react-router-dom";
-import miLogo from "../../../assets/img/conciertostar.webp"
+import miLogo from "../../../assets/img/conciertostar.webp";
 
 export const Cabecera = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg fixed-top w-100" style={{ backgroundColor: '#343a40' }} data-bs-theme="dark">
+      <nav
+        className="navbar navbar-expand-lg fixed-top w-100"
+        style={{ backgroundColor: "#343a40" }}
+        data-bs-theme="dark"
+      >
         <div className="container-fluid">
           <NavLink className="navbar-brand text-white fs-5" to="/">
-            <img src={miLogo} alt="El logo" style={{ height: '70px', width: 'auto' }} />
+            <img
+              src={miLogo}
+              alt="El logo"
+              style={{ height: "70px", width: "auto" }}
+            />
           </NavLink>
           <button
             className="navbar-toggler"
@@ -23,7 +31,11 @@ export const Cabecera = () => {
           <div className="collapse navbar-collapse" id="navbarColor02">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <NavLink className="nav-link text-white active" aria-current="page" to="/">
+                <NavLink
+                  className="nav-link text-white active"
+                  aria-current="page"
+                  to="/"
+                >
                   Inicio
                 </NavLink>
               </li>
@@ -44,8 +56,9 @@ export const Cabecera = () => {
                 </a>
                 <ul className="dropdown-menu" data-bs-popper="static">
                   <li>
-                    <NavLink className="dropdown-item" to="/adminart">
-                      Administrar artistas
+                  <li>
+                    <NavLink className="dropdown-item" to="/regisart">
+                      Registrar artistas
                     </NavLink>
                   </li>
                   <li>
@@ -56,12 +69,12 @@ export const Cabecera = () => {
                   <li>
                     <hr className="dropdown-divider" />
                   </li>
-                  <li>
-                    <NavLink className="dropdown-item" to="/regisart">
-                      Registrar artistas
+                    <NavLink className="dropdown-item" to="/adminart">
+                      Administrar artistas
                     </NavLink>
                   </li>
                 </ul>
+
               </li>
 
               <li className="nav-item">
@@ -70,17 +83,6 @@ export const Cabecera = () => {
                 </NavLink>
               </li>
             </ul>
-            <form className="d-flex" role="search">
-              <input
-                className="form-control form-control-sm me-2"
-                type="search"
-                placeholder="Buscar"
-                aria-label="Buscar"
-              />
-              <button className="btn btn-outline-light btn-sm" type="submit">
-                Buscar
-              </button>
-            </form>
           </div>
         </div>
       </nav>
